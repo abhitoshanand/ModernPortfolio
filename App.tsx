@@ -1,0 +1,28 @@
+import { ThemeProvider } from './context/ThemeContext';
+import { Navbar } from './components/Navbar';
+import { Profile } from './components/Profile';
+import { About } from './components/About';
+import { Education } from './components/Education';
+import { Experience } from './components/Experience';
+import { Projects } from './components/Projects';
+import { Contact } from './components/Contact';
+import { Footer } from './components/Footer';
+
+export function App() {
+  return (
+    <ThemeProvider>
+      <div className="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+        <Navbar />
+        <main>
+          <Profile />
+          <About />
+          <Education />
+          <Experience />
+          <Projects />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </ThemeProvider>
+  );
+}
